@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var Chirp = require("../models/posts.js");
+var Chirp = require("../models/");
 
 
 // Routes
