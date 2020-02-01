@@ -14,14 +14,14 @@ var db = require("../models/post.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  
-  app.get("/", function(req, res) {    
-    console.log('landing')    
-       res.render("index");
+
+  app.get("/", function(req, res) {        
+    console.log("Hello");
+    res.render("index");
     });
         
   app.get("/forum", function(req, res){
-    console.log('forum')
+    console.log("Show Us The Forum!");
     res.render("forum");
   });
 
@@ -34,6 +34,10 @@ module.exports = function(app) {
     // results are available to us inside the .then
       res.json(results);
     });
+  });
+
+  app.get("*", function(req, res) {
+    console.log("Woohoo")
   });
 
   // Add a post

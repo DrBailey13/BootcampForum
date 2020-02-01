@@ -4,27 +4,42 @@ html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
 
+  .control {
+      text-align: center;
+      position: relative;
+  }
+
   .navbar-logo {
     background-image: url("../images/SmallLogo.png");
     width: 150px;
     height: 75px;
   }
 
+  .navbar-brand {
+    background-color: white;
+  }
+
   .hero.is-info {
     background: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
-      ), url('../images/background2.png') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
+      );
+    background-image: url("../images/background2.png");
+    color: #fff;
+    opacity: 0.3;
     background-size: cover;
   }
 
+  .title {
+    font-size: 60px;
+    margin-bottom: 0px;
+  }
+  
   .button.is-info {
     background-color: #209cee;
-    /* border-color: transparent; */
+    border-color: transparent;
     color: #fff;
+    align-content: center;
   }
 
   .hero .nav, .hero.is-success .nav {
@@ -37,6 +52,7 @@ html,body {
   }
 
 
+  
 
 
 
