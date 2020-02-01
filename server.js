@@ -22,7 +22,7 @@ app.use(express.static('public'));
 const routes = express.Router()
 require('./routes/api-routes.js')(routes)
 
-app.use('/*', routes);
+app.use('/', routes);
 
 // Start our server so that it can begin listening to client requests.
 app.listen(PORT, function() {

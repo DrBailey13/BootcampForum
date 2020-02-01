@@ -14,6 +14,7 @@ var db = require("../models/post.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
+
   app.get("/", function(req, res) {        
     console.log("Hello");
     res.render("index");
