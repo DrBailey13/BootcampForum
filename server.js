@@ -15,7 +15,7 @@ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
 app.set('view engine', 'handlebars');
 
 // Serve static content for the app from the 'public' directory in the application directory.
-//app.use(express.static('public'));
+app.use(express.static('public'));
 
 // Import routes and give the server access to them.
 //const routes = require('./routes/api-routes')
