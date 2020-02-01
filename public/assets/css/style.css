@@ -1,84 +1,54 @@
-/* Login Template CSS */
+/* Landing Template CSS */
+
 html,body {
-    font-family: 'Questrial', sans-serif;
-    font-size: 14px;
-    font-weight: 300;
-    background-image: url("../images/background.png");
+    font-family: 'Bebas Neue', cursive;
+    font-size: 3rem;
   }
 
-  .container1 {
-      padding-top:200px;
+  .hero.is-info {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ), url('../images/background2.png') center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    opacity: 0.3;
   }
 
-  .welcome {
-    font-family: 'Questrial', sans-serif;
-    font-size: 20px;
-    font-weight: 500;
+  .has-text-centered {
+      margin-bottom: 250px;
   }
 
-  .hero.is-success {
-    padding-top: 20px;
+  .title {
+    font-size: 60px;
+    margin-bottom: 0px;
   }
+
+  .title2 {
+    font-size: 40px;
+    font-family: 'Courgette', cursive;
+  }
+
+  .title3 {
+    font-size: 40px;
+  }
+
+  .control {
+    box-sizing: border-box;
+    clear: both;
+    font-size: 1rem;
+    position: relative;
+    text-align: center;
+}
 
   .hero .nav, .hero.is-success .nav {
     -webkit-box-shadow: none;
     box-shadow: none;
   }
 
-  .box {
-    margin-top: 5rem;
-  }
-
-  .box2 {
-    margin-top: 5rem;
-  }
-  
-  .avatar {
-    margin-top: -40px;
-    padding-bottom: 20px;
-  }
-
-  .avatar img {
-    padding: 5px;
-    background: #fff;
-    border-radius: 50%;
-    -webkit-box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
-    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
-  }
-
-  input {
-    font-weight: 300;
-  }
-
-  p {
-    font-weight: 700;
-  }
-
-  p.subtitle {
-    padding-top: 1rem;
-  }
-  
-  .login-hr {
-    border-bottom: 1px solid black;
-  }
-
-  /* .has-text-green {
-      color: #177025;
-  } */
-  
-  .has-text-black {
-      color: black;
-  }
-
-  /* .has-text-gold {
-    color: #d4af37;
-  }
-   */
-
-  .field {
-    padding-bottom: 10px;
-  }
-  
-  .fa {
-    margin-left: 5px; 
+  .hero .subtitle {
+    padding: 3rem 0;
+    line-height: 1.5;
   }
