@@ -14,11 +14,14 @@ var db = require("../models/post.js");
 // Routes
 // =============================================================
 module.exports = function(app) {
-  app.get("/", function(req, res) {        
+  
+  app.get("/", function(req, res) {    
+    console.log('landing')    
        res.render("index");
     });
         
   app.get("/forum", function(req, res){
+    console.log('forum')
     res.render("forum");
   });
 
