@@ -2,6 +2,25 @@
 html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     background: #F2F6FA;
+    background-color: #becfc1;
+  }
+
+  a {
+    color: #12ad2a;
+  }
+
+  .input, .textarea {
+    border: 1.5px solid #177025;
+  }
+
+  img {
+    width: 200px;
+    height: 200px;
+  }
+
+  a.navbar-item img {
+    height: 100px;
+    max-height: 8.0rem;
   }
 
   footer {
@@ -9,7 +28,7 @@ html,body {
   }
 
   .topNav {
-    border-top: 5px solid #3498DB;
+    border-top: 5px solid #d4af37;
   }
 
   .topNav .container {
@@ -36,10 +55,20 @@ html,body {
     font-weight: 700;
   }
 
+  .button.is-info.is-outlined {
+    background-color: transparent;
+    border-color: #177025;
+    color: #177025;
+  }
+
+  .input:focus {
+    border: 3px solid #d4af37;
+  }
+
   .button.is-primary.is-alt {
-    background: #00c6ff;
-    background: -webkit-linear-gradient(to bottom, #0072ff, #00c6ff);
-    background: linear-gradient(to bottom, #0072ff, #00c6ff);
+    background: #177025;
+    background: -webkit-linear-gradient(to bottom, #177025, #12ad2a);
+    background: linear-gradient(to bottom, #177025, #12ad2a);
     font-weight: 700;
     font-size: 14px;
     height: 3rem;

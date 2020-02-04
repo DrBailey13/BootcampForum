@@ -4,15 +4,23 @@ html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
 
+  .avatar {
+      width: 375px;
+      height: 260px;
+      align-content: center;
+      margin: 0 auto;
+  }
+
+  img {
+    height: auto;
+    max-width: 100%;
+    width: 390px;
+    height: 300px;
+  }
+
   .control {
       text-align: center;
       position: relative;
-  }
-
-  .navbar-logo {
-    background-image: url("../images/SmallLogo.png");
-    width: 150px;
-    height: 75px;
   }
 
   .navbar-brand {
@@ -24,22 +32,43 @@ html,body {
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
       );
-    background-image: url("../images/background2.png");
-    color: #fff;
-    opacity: 0.3;
+    background-image: url("../images/background3.png");
+    color: black;
+    opacity: 0.8;
     background-size: cover;
   }
 
-  .title {
-    font-size: 60px;
-    margin-bottom: 0px;
+  .hero.is-info .subtitle {
+    color: #177025;
+    font-size: 25px;
+    font-weight: 300;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+}
+  .hero.is-info .title {
+    color: #177025;
+    font-family: 'Bebas Neue', cursive;
   }
-  
+
+  h2.subtitle {
+    color: #d4af37;
+  }
+
+  .title {
+    font-size: 88px;
+    margin-bottom: 0px;
+    color: #177025;
+    text-shadow: 4px 2px #d4af37;
+  }
+
   .button.is-info {
-    background-color: #209cee;
+    background-color: #177025;
     border-color: transparent;
     color: #fff;
     align-content: center;
+  }
+
+  .button.is-info:hover {
+      background-color: #d4af37;
   }
 
   .hero .nav, .hero.is-success .nav {
