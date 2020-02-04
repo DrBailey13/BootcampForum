@@ -3,7 +3,7 @@ let express = require('express');
 let PORT = process.env.PORT || 8080;
 
 let app = express();
-
+var db = require("./models");
 // Parse application body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -20,13 +20,17 @@ app.use(express.static('public'));
 // Import routes and give the server access to them.
 //const routes = require('./routes/api-routes')
 const routes = express.Router()
-require('./routes/api-routes.js')(routes)
+require('./routes/html-api-routes.js')(routes)
 
 app.use('/', routes);
 
 // Start our server so that it can begin listening to client requests.
-app.listen(PORT, function() {
-  // Log (server-side) when our server has started
-  console.log('Server listening on: http://localhost:' + PORT);
-});
 
+db.sequelize.sync().then(function() {
+  app.listen(PORT, function () {
+    // Log (server-side) when our server has started
+    console.log('Server listening on: http://localhost:' + PORT);
+  });
+
+
+});
