@@ -10,11 +10,12 @@ $(document).ready(function () {
     var postId;
     // Sets a flag for whether or not we're updating a post to be false initially
     var updating = false;
-    $("#submit").on("click", function handleInputSubmit(event) {
-        // event.preventDefault();
+    $("#submit").on("click", function(event) {
+        event.preventDefault();
         // Wont submit the post if we are missing a body or a title
+        
         if (!initialsInput.val().trim() || !topicInput.val().trim() || !bodyInput.val().trim()) {
-            return;
+            console.log("it really works");
         }
         // Constructing a newPost object to hand to the database
         var newPost = {
@@ -22,8 +23,18 @@ $(document).ready(function () {
             topic: topicInput.val().trim(),
             body: bodyInput.val().trim(),
         };
-        console.table(newPost);
-
+        // console.log(newPost);
+       var queryURL = "https://ui-avatars.com/api?name=" + initialsInput.val().trim();
+       console.log("it works");
+       $.ajax({
+        url: queryURL,
+        method: "GET",
+    }).then(function (response) {
+       console.log("ajax success")
+        console.log(response) 
+    }).catch(function(error){
+        console.log("error ", error)
+    });
         // If we're updating a post run updatePost to update a post
         // Otherwise run submitPost to create a whole new post
         if (updating) {
@@ -42,11 +53,6 @@ $(document).ready(function () {
         
     });
 });
-
-
-
-
-
 
 
 
