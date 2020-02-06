@@ -76,6 +76,7 @@ app.post("/api/forum", function (req, res) {
   });
 });
 
+
 //This is the search for topics
 app.get("/api/search", (req, res) => { //I used search because that's what I used in the forum handlebars form RIGHT? or WRONG?
   let { term } = req.query;  
