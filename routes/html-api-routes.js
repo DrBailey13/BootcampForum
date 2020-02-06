@@ -24,9 +24,6 @@ module.exports = function (app) {
   });
   });
 
-  app.get("/forum", function(req, res){
-    res.render("forum ");
-    });
 
   app.get("/post", function (req, res) {
     res.render("post");
@@ -78,11 +75,13 @@ app.post("/api/forum", function (req, res) {
 
 
 //This is the search for topics
-app.get("/api/search", (req, res) => { //I used search because that's what I used in the forum handlebars form RIGHT? or WRONG?
-  let { term } = req.query;  
-  term = term.toLowerCase();
-  db.Post.findall({where: { topic: { [Op.like]: '%' + term + '%' }}})
-    .then(dbPost => res.render('post', {dbPost}))
-    .catch(err => console.log(err));
+app.get("/search/:query", (req, res) => { //I used search because that's what I used in the forum handlebars form RIGHT? or WRONG?
+  let query = req.params.query
+  console.log(query, "<=====")
+  //term = term.toLowerCase();
+  db.Post.findAll({where: { topic:  query}})
+    .then(post=>res.render("forum", {Post : post}))
+    .catch(err => console.log(err + "@@@@@@@@@@"));
 });
 }
+//res.render('post', {dbPost})

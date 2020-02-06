@@ -2,10 +2,10 @@
 
 {
   "development": {
-    "username": "jk0ilg8wnarbmyui",
-    "password": "yserdt1xxx0ubglw",
-    "database": "cnrbbh87or07t8pk",
-    "host": "a07yd3a6okcidwap.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "jojo2448",
+    "database": "bootcamp_forum",
+    "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": "0"
   },
