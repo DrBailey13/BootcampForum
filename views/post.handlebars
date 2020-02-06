@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="../">
-                <img src="../images/bulma.png" width="112" height="28">
+                <img src="../assets/images/longLogo.png" width="112" height="28">
             </a>
             <div class="navbar-burger burger" data-target="topNav">
                 <span></span>
@@ -32,9 +32,9 @@
     <div class="container">
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item is-active" href="/forum">Discussions</a>
-                <a class="navbar-item is-active" href="#">Create Post</a>
-            </div>
+                <a class="navbar-item is-active" id="discussTab" href="/forum">Discussions</a>
+                <a class="navbar-item is-active" id="createTab" href="#">Create Post</a>
+            </div> 
             <div class="navbar-end">
                 <div class="navbar-item">
                     <input class="input" type="search" placeholder="Search forum...">
@@ -43,36 +43,35 @@
         </div>
     </div>
 </nav>
-{{!-- <form id="post"> --}}
-    <div class="field">
-        <div class="control">
-            <input class="input is-primary" type="text" placeholder="Enter Initials here" id="initials">
-        </div>
+<div class="field">
+    <div class="control">
+        <input class="input is-primary" type="text" placeholder="Enter First and Last Initials Here" id="initials">
     </div>
-    <div class="field">
-        <div class="control">
-            <input class="input is-primary" type="text" placeholder="Enter topic here" id="topic">
-        </div>
+</div>
+<div class="field">
+    <div class="control">
+        <input class="input is-primary" type="text" placeholder="Enter Topic Here" id="topic">
     </div>
-    <article class="media">
-        <figure class="media-left">
-            <p class="image is-64x64">
-                <img src="https://bulma.io/images/placeholders/128x128.png">
+</div>
+<article class="media">
+    <figure class="media-left">
+        <p class="image is-64x64">
+            <img src="https://bulma.io/images/placeholders/128x128.png">
+        </p>
+    </figure>
+    <div class="media-content">
+        <div class="field">
+            <p class="control">
+                <textarea class="textarea" placeholder="Add a comment..." id="body"></textarea>
             </p>
-        </figure>
-        <div class="media-content">
-            <div class="field">
-                <p class="control">
-                    <textarea class="textarea" placeholder="Add a comment..." id="body"></textarea>
-                </p>
-            </div>
-            <div class="field">
-                <p class="control">
-                    <button id="submit" class="button">Post comment</button>
-                </p>
-            </div>
         </div>
-{{!-- </form> --}}
+        <div class="field">
+            <p class="control">
+                <button id="submit" class="button">Post comment</button>
+            </p>
+        </div>
+    </div>
+
 </article>
 <footer class="footer">
     <div class="container">

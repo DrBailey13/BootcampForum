@@ -2,7 +2,7 @@
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="../">
-                <img src="../assets/images/SmallLogo.png">
+                <img src="../assets/images/longLogo.png">
             </a>
             <div class="navbar-burger burger" data-target="topNav">
                 <span></span>
@@ -32,8 +32,8 @@
     <div class="container">
         <div class="navbar-menu">
             <div class="navbar-start">
-                <a class="navbar-item is-active" href="#">Discussions</a>
-                <a class="navbar-item is-active" href="/post">Create Post</a>
+                <a class="navbar-item is-active" id="discussTab" href="#">Discussions</a>
+                <a class="navbar-item is-active" id="createTab" href="/post">Create Post</a>
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
@@ -47,25 +47,6 @@
     <div class="columns">
         <div class="column is-3">
             <a class="button is-primary is-block is-alt is-large" href="/post">New Discussion</a>
-            {{!-- FUTURE DEVELOPMENT: IF TIME ALLOWS WE CAN ADD THESE AS EXISTING DISCUSSION TABS TO CLICK INTO --}}
-            {{!-- <aside class="menu">
-                <p class="menu-label">
-                    Current Discussions
-                </p>
-                <ul class="menu-list">
-                    <li><span class="tag is-dark is-medium ">HTML/CSS/Bootstrap</span></li>
-                    <li><span class="tag is-dark is-medium ">JavaScript</span></li>
-                    <li><span class="tag is-dark is-medium ">API's</span></li>
-                    <li><span class="tag is-dark is-medium ">jQuery</span></li>
-                    <li><span class="tag is-dark is-medium ">NodeJS</span></li>
-                    <li><span class="tag is-dark is-medium ">Express</span></li>
-                    <li><span class="tag is-dark is-medium ">MySQL</span></li>
-                    <li><span class="tag is-dark is-medium ">Sequelize</span></li>
-                    <li><span class="tag is-dark is-medium ">Homework Help</span></li>
-                    <li><span class="tag is-dark is-medium ">Job Info</span></li>
-                    <li><span class="tag is-dark is-medium ">Resources</span></li>
-                </ul>
-            </aside> --}}
         </div>
         <ul>
             {{#each Post}}
@@ -87,78 +68,34 @@
                                 <br>
                                 {{this.dataValues.body}}
                             </p>
+                        </figure>
+                        <div class="media-content">
+                            <div class="content">
+                                <p>
+                                    <large>{{this.dataValues.topic}}</large>
+                                    <br>
+                                    {{this.dataValues.body}}
+                                </p>
+                            </div>
+                            <nav class="level is-mobile">
+                                <div class="level-left">
+                                    <a class="button is-small is-info is-outlined" href="/">
+                                <span class="icon">
+                                    <i class="fa fa-reply"></i>
+                                </span>
+                                <span>Reply</span>
+                            </a>
+                                </div>
+                            </nav>
                         </div>
-                        <nav class="level is-mobile">
-                            <div class="level-left">
-                                <a class="level-item">
-                                    <span class="icon is-small"><i class="fas fa-reply"></i></span>
-                                </a>
-                            </div>
-                        </nav>
-                    </div>
-                    {{!-- <div class="media-right">
-                        <button class="delete"></button>
-                    </div> --}}
-                </article>
-            </li>
-            {{/each}}
-        </ul>
-        {{!-- <article class="media">
-                            <figure class="media-left">
-                                <p class="image is-48x48">
-                                    <img src="https://bulma.io/images/placeholders/96x96.png">
-                                </p>
-                            </figure>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Sean Brown</strong>
-                                        <br>
-                                        Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant
-                                        morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam
-                                        blandit nisl a nulla sagittis, a lobortis leo feugiat.
-                                        <br>
-                                        <a>Reply</a>
-                                    </p>
-                                </div>
-                                <article class="media">
-                                    Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus
-                                    ullamcorper sit amet nec massa.
-                                </article>
-                                <article class="media">
-                                    Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada
-                                    metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta
-                                    aliquet tortor.
-                                </article>
-                            </div>
-                        </article>
-                        <article class="media">
-                            <figure class="media-left">
-                                <p class="image is-48x48">
-                                    <img src="https://bulma.io/images/placeholders/96x96.png">
-                                </p>
-                            </figure>
-                            <div class="media-content">
-                                <div class="content">
-                                    <p>
-                                        <strong>Kayli Eunice </strong>
-                                        <br>
-                                        Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius
-                                        felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante
-                                        ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;
-                                        Phasellus lacinia non nisl id feugiat.
-                                        <br>
-                                        <a>Reply</a>
-                                    </p>
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-                </article>
-            </div>
+                    </article>
+                </li>
+                {{/each}}
+            </ul>
         </div>
-    </div> --}}
+    </div>
 </section>
+
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
@@ -166,7 +103,7 @@
                 <div class="field is-grouped is-grouped-multiline">
                     <div class="control">
                         <div class="tags has-addons">
-                            <a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">UNC
+                            <a class="tag is-link" href="https://github.com/DrBailey13/project2">UNC
                                 Charlotte Web Development Student Forum</a>
                             <span class="tag is-light">Contributors: DeVante Bailey, Jodi Rhoades, Meredith Grimes,
                                 Tyler Cauley</span>

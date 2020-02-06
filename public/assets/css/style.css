@@ -4,18 +4,20 @@ html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
   }
 
+  div.box {
+      padding: 0px;
+  }
+
   .avatar {
-      width: 375px;
-      height: 260px;
-      align-content: center;
-      margin: 0 auto;
+    width: 375px;
+    height: 260px;
+    align-content: center;
+    margin: 0 auto;
   }
 
   img {
-    height: auto;
     max-width: 100%;
-    width: 390px;
-    height: 300px;
+  
   }
 
   .control {
@@ -76,76 +78,10 @@ html,body {
     box-shadow: none;
   }
   .hero .subtitle {
-    padding: 3rem 0;
+    padding: 1rem 0;
     line-height: 1.5;
   }
 
-
-  
-
-
-
-
-
-
-/* html,body {
-    font-family: 'Bebas Neue', cursive;
-    font-size: 3rem;
-    background-image: url("../images/background2.png");
+  .contentImage {
+      width: 100%;
   }
-
-  .hero-body {
-      background-image: url("../images/background2.png") center center fixed;
-  }
-
-  /* .button.is-info {
-    background-color: #209cee;
-    border-color: transparent;
-    color: #fff;
-  }
-
-  .hero.is-info {
-    background: linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5), url("../images/background2.png")
-      ),
-     -webkit-background-size: cover,
-     -moz-background-size: cover,
-     -o-background-size: cover,
-     background-size: cover,
-     opacity: 0.3,
-  /* } */
-
-  /* .has-text-centered {
-      margin-bottom: 250px;
-  }
-
-  .title {
-    font-size: 60px;
-    margin-bottom: 0px;
-  }
-
-  .title2 {
-    font-size: 40px;
-    font-family: 'Courgette', cursive;
-  } */ 
-
-  /* .title3 {
-    font-size: 40px;
-  }
-
-  .control {
-    font-size: 1rem;
-    position: relative;
-    text-align: center important!;
-  }
-
-  .hero .nav, .hero.is-success .nav {
-    -webkit-box-shadow: none;
-    box-shadow: none;
-  }
-
-  .hero .subtitle {
-    padding: 3rem 0;
-    line-height: 1.5;
-  } */ 
