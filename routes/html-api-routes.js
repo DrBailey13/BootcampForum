@@ -1,14 +1,11 @@
 // *********************************************************************************
 // api-routes.js - this file offers a set of routes for displaying and saving data to the db
 // *********************************************************************************
-var express = require("express");
-
 //var app = express.Router();
-
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
+const express = require('express');//WHY the 3 dots on require and express??*********************
 var db = require("../models");
-
-
-
 
 module.exports = function (app) {
   // HTML Routes
@@ -80,5 +77,12 @@ app.post("/api/forum", function (req, res) {
 });
 
 
+//This is the search for topics
+app.get("/api/search", (req, res) => { //I used search because that's what I used in the forum handlebars form RIGHT? or WRONG?
+  let { term } = req.query;  
+  term = term.toLowerCase();
+  db.Post.findall({where: { topic: { [Op.like]: '%' + term + '%' }}})
+    .then(dbPost => res.render('post', {dbPost}))
+    .catch(err => console.log(err));
+});
 }
-

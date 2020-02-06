@@ -4,8 +4,12 @@ module.exports = function (sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
+        notNull: {
+          msg: 'Please enter your initials'
+        },
         len: [1, 2]
       },
+      primaryKey: true
     },
     topic: {
       type: DataTypes.STRING,
@@ -24,6 +28,33 @@ module.exports = function (sequelize, DataTypes) {
   });
   
   return Post;
+
+  var Reply = sequelize.define("Reply", {
+    name: {
+      type: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        len: [1, 2]
+      },
+      references: "posts",
+      referencesKey: "id",
+    },    
+    body: {
+      type: DataTypes.TEXT,
+      allowNull: false,
+      validate: {
+        len: [1, 255]
+      }
+    },    
+  });
+  return Reply;
+
+  Post.hasMany(reply); // Set one to many relationship 
+  
 };
+
+
+
+
 
 
