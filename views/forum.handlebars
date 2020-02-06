@@ -37,7 +37,9 @@
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <input class="input" type="search" placeholder="Search forum...">
+                    <form action= "post/search" class="search-form">
+                        <input type="search" name="term" placeholder="Search topics...">
+                    </form>
                 </div>
             </div>
         </div>
@@ -82,7 +84,7 @@
                         <div class="content">
                             <p>
 
-                                {{!-- <strong>{{this.name}}</strong> --}}
+                                <strong>{{this.dataValues.name}}</strong>
                                 <large>{{this.dataValues.topic}}</large>
                                 <br>
                                 {{this.dataValues.body}}
