@@ -48,16 +48,25 @@
         <div class="column is-3">
             <a class="button is-primary is-block is-alt is-large" href="/post">New Discussion</a>
         </div>
-        <div class="container is-fluid">
-            <ul>
-                {{#each Post}}
-                {{log this}}
-                {{debugger}}
-                <li>
-                    <article class="media">
-                        <figure class="media-left">
-                            <p class="image is-64x64">
-                                <img src="https://bulma.io/images/placeholders/128x128.png">
+        <ul>
+            {{#each Post}}
+            {{log this}}
+            {{debugger}}
+            <li>
+                <article class="media">
+                    <figure class="media-left">
+                        <p class="image is-64x64">
+                            <img id="image-init" src= "https://ui-avatars.com/api?name={{this.dataValues.name}}"/>
+                        </p>
+                    </figure>
+                    <div class="media-content">
+                        <div class="content">
+                            <p>
+
+                                {{!-- <strong>{{this.name}}</strong> --}}
+                                <large>{{this.dataValues.topic}}</large>
+                                <br>
+                                {{this.dataValues.body}}
                             </p>
                         </figure>
                         <div class="media-content">
