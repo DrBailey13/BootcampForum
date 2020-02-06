@@ -1,26 +1,24 @@
+
+
 {
   "development": {
-    "username": "root",
-    "password": "babypunky1322",
-    "database": "bootcamp_forum",
-    "host": "127.0.0.1",
+    "username": "jk0ilg8wnarbmyui",
+    "password": "yserdt1xxx0ubglw",
+    "database": "cnrbbh87or07t8pk",
+    "host": "a07yd3a6okcidwap.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": "0"
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
-    "host": "127.0.0.1",
+    "username": "jk0ilg8wnarbmyui",
+    "password": "yserdt1xxx0ubglw",
+    "database": "cnrbbh87or07t8pk",
+    "host": "a07yd3a6okcidwap.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
     "dialect": "mysql",
     "operatorsAliases": "0"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "operatorsAliases": "0"
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
