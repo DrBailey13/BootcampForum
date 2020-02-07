@@ -28,6 +28,7 @@
         </div>
     </div>
 </nav>
+
 <nav class="navbar is-white">
     <div class="container">
         <div class="navbar-menu">
@@ -37,7 +38,7 @@
             </div>
             <div class="navbar-end">
                 <div class="navbar-item">
-                    <form action= "post/search" class="search-form" id="searchForm">
+                    <form action="post/search" class="search-form" id="searchForm">
                         <input type="search" name="term" id="searchQuery" placeholder="Search topics...">
                     </form>
                 </div>
@@ -45,44 +46,50 @@
         </div>
     </div>
 </nav>
+
 <section class="container">
     <div class="columns">
         <div class="column is-3">
             <a class="button is-primary is-block is-alt is-large" href="/post">New Discussion</a>
         </div>
-        <ul>
-            {{#each Post}}
-            {{log this}}
-            {{debugger}}
-            <li>
-                <article class="media">
-                    <figure class="media-left">
-                        <p class="image is-64x64">
-                            <img id="image-init" src= "https://ui-avatars.com/api?name={{this.dataValues.name}}"/>
-                        </p>
 
-                    </figure>                    
-
+        <div class="container is-fluid">
+            <ul>
+                {{#each Post}}
+                {{log this}}
+                {{debugger}}
+                <li>
+                    <article class="media">
+                        <figure class="media-left">
+                            <p class="image is-64x64">
+                                <img id="image-init" src="https://ui-avatars.com/api?name={{this.dataValues.name}}" />
+                            </p>
+                        </figure>
                         <div class="media-content">
                             <div class="content">
                                 <p>
+                                    {{!-- <strong>{{this.name}}</strong> --}}
                                     <large>{{this.dataValues.topic}}</large>
                                     <br>
                                     {{this.dataValues.body}}
                                 </p>
+                                <nav class="level is-mobile">
+                                    <div class="level-left">
+                                        <a class="button is-small is-info is-outlined" href="/">
+                                            <span class="icon">
+                                                <i class="fa fa-reply"></i>
+                                            </span>
+                                            <span>Reply</span>
+
+                                        </a>
+                                    </div>
+                                </nav>
+                                <br>
                             </div>
-                            <nav class="level is-mobile">
-                                <div class="level-left">
-                                    <a class="button is-small is-info is-outlined" href="/">
-                                <span class="icon">
-                                    <i class="fa fa-reply"></i>
-                                </span>
-                                <span>Reply</span>
-                            </a>
-                                </div>
-                            </nav>
                         </div>
+                
                     </article>
+                    <br>
                 </li>
                 {{/each}}
             </ul>
