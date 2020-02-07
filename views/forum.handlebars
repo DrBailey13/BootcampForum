@@ -1,57 +1,52 @@
-<nav class="navbar is-white topNav">
 
-    
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="../">
-                <img src="../assets/images/longLogo.png">
-            </a>
-            <div class="navbar-burger burger" data-target="topNav">
-                <span></span>
-                <span></span>
-                <span></span>
+<nav class="navbar is-white is-mobile is-desktop">
+    <div class="navbar-brand">
+        {{!-- Logo Image --}}
+        <a class="navbar-item">
+            <img src="../assets/images/longLogo.png" alt="logo" width="112" height="28">
+        </a>
+        {{!-- Hamburger Menu --}}
+        <div class="navbar-burger burger" data-target="navMenuColorwhite-example">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="navMenuColorwhite-example" class="navbar-menu">
+        {{!-- NavBar Start (left) with tab--}}
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+
+                <a class="navbar-item is-active" id="discussTab" href="#">Discussions</a>
             </div>
         </div>
-        <div id="topNav" class="navbar-menu">
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <a class="button is-small is-info is-outlined" href="/">
-                                <span class="icon">
-                                    <i class="fa fa-user"></i>
-                                </span>
-                                
-                                <span>Logout</span>
-                            </a>
-                        </p>
-                    </div>
+        <div class="navbar-end">
+            {{!-- Search Bar --}}
+            <div class="navbar-item">
+                <form action="post/search" class="search-form" id="searchForm">
+                    <input type="search" name="term" id="searchQuery" placeholder="Search topics...">
+                </form>
+            </div>
+            {{!-- Logout Button --}}
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button is-small is-info is-outlined" href="/">
+                            <span class="icon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <span>Logout</span>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
+ 
 </nav>
 
-<nav class="navbar is-white">
-    <div class="container">
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item is-active" id="discussTab" href="#">Discussions</a>
-                <a class="navbar-item is-active" id="createTab" href="/post">Create Post</a>
-            </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <form action="post/search" class="search-form" id="searchForm">
-                        <input type="search" name="term" id="searchQuery" placeholder="Search topics...">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-</nav> 
 
-
-<section class="container">
+<section class="container is-mobile is-desktop">
     <div class="columns">
         <div class="column is-3">
             <a class="button is-primary is-block is-alt is-large" href="/post">New Discussion</a>
@@ -76,7 +71,7 @@
                                     <br>
                                     {{this.dataValues.body}}
                                 </p>
-                                <nav class="level is-mobile">
+                                <nav class="level">
                                     <div class="level-left">
                                         <a class="button is-small is-info is-outlined" href="/">
                                             <span class="icon">
@@ -98,17 +93,16 @@
         </div>
     </div>
 </section>
-<footer class="footer">
+<footer class="footer is-mobile is-desktop">
     <div class="container">
         <div class="content has-text-centered">
-            <div class="columns is-mobile is-centered">
+            <div class="columns is-centered">
                 <div class="field is-grouped is-grouped-multiline">
                     <div class="control">
                         <div class="tags has-addons">
                             <a class="tag is-link" href="https://github.com/DrBailey13/project2">UNC
                                 Charlotte Web Development Student Forum</a>
-                            <span class="tag is-light">Contributors: DeVante Bailey, Jodi Rhoades, Meredith Grimes,
-                                Tyler Cauley</span>
+                            <span class="tag is-light">GitHub &nbsp;<i class="fa fa-github"></i></span>
                         </div>
                     </div>
                     <div class="control">

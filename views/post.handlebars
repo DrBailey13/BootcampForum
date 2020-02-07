@@ -1,74 +1,73 @@
-<nav class="navbar is-white topNav">
-    <div class="container">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="../">
-                <img src="../assets/images/longLogo.png" width="112" height="28">
-            </a>
-            <div class="navbar-burger burger" data-target="topNav">
-                <span></span>
-                <span></span>
-                <span></span>
+<nav class="navbar is-white is-mobile is-desktop">
+    <div class="navbar-brand">
+        {{!-- Logo Image --}}
+        <a class="navbar-item" href="/forum">
+            <img src="../assets/images/longLogo.png" alt="logo" width="112" height="28">
+        </a>
+        {{!-- Hamburger Menu --}}
+        <div class="navbar-burger burger" data-target="navMenuColorwhite-example">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+    <div id="navMenuColorwhite-example" class="navbar-menu">
+        {{!-- NavBar Start (left) with tab--}}
+        <div class="navbar-start">
+            <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-item is-active" id="discussTab" href="#">Discussions</a>
             </div>
         </div>
-        <div id="topNav" class="navbar-menu">
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="field is-grouped">
-                        <p class="control">
-                            <a class="button is-small is-info is-outlined" href="/">
-                                <span class="icon">
-                                    <i class="fa fa-user"></i>
-                                </span>
-                                <span>Logout</span>
-                            </a>
-                        </p>
-                    </div>
+        <div class="navbar-end">
+            {{!-- Logout Button --}}
+            <div class="navbar-item">
+                <div class="field is-grouped">
+                    <p class="control">
+                        <a class="button is-small is-info is-outlined" href="/">
+                            <span class="icon">
+                                <i class="fa fa-user"></i>
+                            </span>
+                            <span>Logout</span>
+                        </a>
+                    </p>
                 </div>
             </div>
         </div>
     </div>
 </nav>
-<nav class="navbar is-white">
-    <div class="container">
-        <div class="navbar-menu">
-            <div class="navbar-start">
-                <a class="navbar-item is-active" id="discussTab" href="/forum">Discussions</a>
-                <a class="navbar-item is-active" id="createTab" href="#">Create Post</a>
-            </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <input class="input" type="search" placeholder="Search forum...">
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-<div class="field">
+<br>
+<br>
+<br>
+<div class="field is-mobile is-desktop">
     <div class="control">
         <input class="input is-primary" type="text" placeholder="Enter First and Last Initials Here" id="initials">
     </div>
 </div>
-<div class="field">
+<div class="field is-mobile is-desktop">
     <div class="control">
         <input class="input is-primary" type="text" placeholder="Enter Topic Here" id="topic">
     </div>
 </div>
-<article class="media">
+<article class="media is-mobile is-desktop">
     <div class="media-content">
         <div class="field">
             <p class="control">
                 <textarea class="textarea" placeholder="Add a comment..." id="body"></textarea>
             </p>
         </div>
-        <div class="field">
+        <br>
+        <div class="field is-mobile is-desktop">
             <p class="control">
                 <button id="submit" class="button">Post comment</button>
             </p>
             <br>
         </div>
     </div>
-
 </article>
+<br>
+<br>
+<br>
+
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
@@ -78,8 +77,7 @@
                         <div class="tags has-addons">
                             <a class="tag is-link" href="https://github.com/BulmaTemplates/bulma-templates">UNC
                                 Charlotte Web Development Student Forum</a>
-                            <span class="tag is-light">Contributors: DeVante Bailey, Jodi Rhoades, Meredith Grimes,
-                                Tyler Cauley</span>
+                            <span class="tag is-light">GitHub &nbsp;<i class="fa fa-github"></i></span>
                         </div>
                     </div>
                     <div class="control">
