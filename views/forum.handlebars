@@ -1,4 +1,6 @@
 <nav class="navbar is-white topNav">
+
+    
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item" href="../">
@@ -28,8 +30,7 @@
         </div>
     </div>
 </nav>
-
-<nav class="navbar is-white">
+{{!-- <nav class="navbar is-white">
     <div class="container">
         <div class="navbar-menu">
             <div class="navbar-start">
@@ -45,18 +46,14 @@
             </div>
         </div>
     </div>
-</nav>
+</nav> --}}
 
 <section class="container">
-
-    <div class="columns is-mobile has-background-white">
-        <div class="container is-fluid is-mobile has-background-white">
-            <a class="button is-mobile is-primary is-block is-alt is-large has-background-white" href="/post">New Discussion</a>
+    <div class="columns">
+        <div class="column is-3">
+            <a class="button is-primary is-block is-alt is-large" href="/post">New Discussion</a>
         </div>
-    </div>
-
-    <div class="columns is-mobile">
-        <div class="row container is-fluid is-mobile">
+        <div class="container is-fluid">
             <ul>
                 {{#each Post}}
                 {{log this}}
@@ -98,7 +95,6 @@
         </div>
     </div>
 </section>
-
 <footer class="footer">
     <div class="container">
         <div class="content has-text-centered">
