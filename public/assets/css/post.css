@@ -3,7 +3,7 @@
 html,body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
     background: #F2F6FA;
-    background-color: #becfc1;
+    background-color: white;
   }
 
   div.navbar-item {
@@ -12,6 +12,21 @@ html,body {
 
   a.navbar-item {
     border-color: 1px solid black;
+  }
+
+  #searchQuery {
+    border: 1px solid #177025;
+    padding: 5px;
+    border-radius: 2px;
+    color: #177025;
+  }
+  
+  #searchQuery:hover {
+    border: 1px solid #177025;
+  }
+  
+  #searchQuery:focus {
+    border: 1px solid #177025;
   }
 
   .footer {
@@ -101,3 +116,4 @@ html,body {
 .button:focus {
     background-color: #d4af37;
 }
+
