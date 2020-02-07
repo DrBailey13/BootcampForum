@@ -48,12 +48,15 @@
 </nav>
 
 <section class="container">
-    <div class="columns">
-        <div class="column is-3">
-            <a class="button is-primary is-block is-alt is-large" href="/post">New Discussion</a>
-        </div>
 
-        <div class="container is-fluid">
+    <div class="columns is-mobile has-background-white">
+        <div class="container is-fluid is-mobile has-background-white">
+            <a class="button is-mobile is-primary is-block is-alt is-large has-background-white" href="/post">New Discussion</a>
+        </div>
+    </div>
+
+    <div class="columns is-mobile">
+        <div class="row container is-fluid is-mobile">
             <ul>
                 {{#each Post}}
                 {{log this}}
@@ -80,14 +83,13 @@
                                                 <i class="fa fa-reply"></i>
                                             </span>
                                             <span>Reply</span>
-
                                         </a>
                                     </div>
                                 </nav>
                                 <br>
                             </div>
                         </div>
-                
+
                     </article>
                     <br>
                 </li>
