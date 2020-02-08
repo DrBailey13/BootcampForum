@@ -6,13 +6,46 @@ html,body {
   background-color: white;
 }
 
+.modal-background {
+  background-color: rgba(10,10,10,.86);
+  margin: 140px;
+  border: 1px solid;
+  border-radius: 10px;
+}
+
+.modal-box {
+  background-color: transparent;
+  border-radius: 6px;
+  box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+  color: #4a4a4a;
+  display: block;
+  padding: 0.5rem;
+}
+
+.control {
+  text-align: center;
+  position: relative;
+  margin: 20px;
+  border-bottom: rgba(10,10,10,.86) !important;
+}
+
+.button.is-primary {
+  background-color: #177025;
+  border-color: transparent;
+  color: #fff;
+}
+
+.button.is-primary:hover {
+  background-color: white;
+  color: #177025;
+}
 
 a {
   color: #12ad2a;
 }
 
 .media-content {
-  border-bottom: 3px solid white !important;
+  border-bottom: 3px solid white;
   border-radius: 2px;
 }
 
