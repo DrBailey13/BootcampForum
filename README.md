@@ -1,8 +1,12 @@
 <p align=center>
-<img src="images/FullSquareLogo.png" width=300>
+<img src="/public/assets/images/FullSquareLogo.png" width=300>
 </p>
 
 ## Description
+
+This application was built by four web developers at the UNC Charlotte Web Development Bootcamp. While taking the course, the developers thought that it would be more beneficial to have access to all students enrolled in the program. This forum allows for all students enrolled in the full-time and part-time course to have access to each other to discuss homework questions, resources, job information, and any other topics they wish to collaborate on.
+
+[UNCC Web Development Bootcamp Forum](https://uncc-bootcamp-forum.herokuapp.com/)
 
 ## User Story
 
@@ -18,28 +22,56 @@ WHEN I have a question I want to discuss
 
 THEN I create a topic and post it in the student forum to share with every class.
 
-## Testing
+## How To Use
 
-1. Verify that the page's look and feel matches the requirements provided for this assignment- (this may be slightly different depending on the view).
-2. Check that an error message displays when no city or an incorrect city is entered.
-3. There should be 2 containers that display showing the content matching the search (Concerts and Restaurants).   
-4. Verify the pages that were supposed to display through the links are there. 
+When the user arrives at the landing page, they can read a description of the application and press Continue to be directed to the Forum page.
+
+![](/public/assets/images/homepage.gif)
+
+Clicking on the Create Discussion button will direct the user to the Post page where the user will type in their first and last initials, the title of the topic, and the message the user wants to say. Once they are finished, they will click Create Post and the new discussion will be posted on the Forum page. 
+
+![](/public/assets/images/searchTopics.gif)
+
+On the Forum page, the user can view current Discussions posted, search to find a current Discussion topic, and click on Create Discussion to add one to the page.
+
+![](/public/assets/images/newDiscussions.gif)
+
+## Styling
+
+This application was built with Bulma Framework: https://bulma.io/
+
+The background image was downloaded for free from Shutterstock: https://www.shutterstock.com/search/collaborate
+
+The logos used were created using Photoshop and inspired by images found on Google of the UNCC Continuing Education: https://www.google.com/imgres?imgurl=https%3A%2F%2Fmma.prnewswire.com%2Fmedia%2F1016875%2FUNCC_Continuing_Education_Logo.jpg%3Fp%3Dpublish&imgrefurl=https%3A%2F%2Fwww.prnewswire.com%2Fnews-releases%2Func-charlotte-and-trilogy-education-launch-fintech-boot-camp-to-expand-digital-skills-of-charlottes-banking-sector-300944835.html&tbnid=ZjCN6o0Du6LceM&vet=12ahUKEwjptdCY38DnAhXF0FMKHSFzBiIQMygAegUIARDMAQ..i&docid=nJlPvYWPBaNSCM&w=1500&h=946&q=unc%20charlotte%20continuing%20education&hl=en&ved=2ahUKEwjptdCY38DnAhXF0FMKHSFzBiIQMygAegUIARDMAQ
 
 ## Code Style
 
+The following code styles were used to complete the application:
 
+* Initials Avatar API
 
-## List of Files
+* Bulma Framework
 
-The following files were created to develop the application:
+* Sequelize
 
-* 
+* Handlebars 
 
-## Gifs
+* JavaScript
 
-<img src="" width=>
+* Photoshop
+
+* GitHub
+
+* Deployed with Heroku
 
 ## Credits
+
+Initials Avatar API: https://rapidapi.com/benbaler/api/initials-avatar
+Bulma: https://bulma.io/
+Font Awesome for Icons: https://fontawesome.com/icons?d=gallery
+Google Fonts: https://fonts.google.com/
+
+***Our TA's and teacher for answering questions and giving great advice to succeed in developing this application.***
 
 ## License 
 
