@@ -90,50 +90,63 @@
                 {{/each}}
             </ul>
             {{!-- reply --}}
-<section class="modal-container">
-    <ul id="replies">
-        {{#each Reply}}
-        {{log this}}
-        {{debugger}}
-        <li>
-            <article class="media">
-                <div class="modal-media-content">
-                    <div class="content">
-                        <h1 id="reply"></h1>
-                        <p id="replyBody">
-                            {{!-- attach Id from DB to displaynone()
-                                <large>{{this.dataValues.topic}}</large> --}}
-                            <br>
-                            {{this.dataValues.body}}
-                        </p>
-                        </figure>
+            <section class="modal-container">
+                <ul id="replies">
+                    {{#each Reply}}
+                    {{log this}}
+                    {{debugger}}
+                    <li>
+                        <article class="media">
+                            <div class="modal-media-content">
+                                <div class="content">
+                                    <figure class="media-left">
+                                        <p class="image is-64x64">
+                                            <img id="image-init"
+                                                src="https://ui-avatars.com/api?name={{this.dataValues.name}}" />
+                                        </p>
+                                    </figure>
+                                    <div class="replyBox">
+                                        <figure class="media-left">
+                                            <p class="image is-64x64">
+                                                <img id="image-init"
+                                                    src="https://ui-avatars.com/api?name={{this.dataValues.name}}" />
+                                            </p>
+                                        </figure>
+                                        <h1 id="reply"></h1>
+                                        <p id="replyBody">
+                                            {{!-- attach Id from DB to displaynone()
+                                             <large>{{this.dataValues.topic}}</large> --}}
+                                            <br>
+                                            {{this.dataValues.body}}
+                                        </p>
+                                    </div>
 
-                        <div class="media-content border-is-transparent">
-                            <nav class="level is-mobile">
-                                <div class="level-left">
-                                    <div class="modal-border">
-                                        <a class="button is-primary modal-button" data-target="#modal"
-                                            class="button is-small is-info is-outlined">
-                                            <span class="icon">
-                                                <i class="fa fa-reply"></i>
-                                            </span>
-                                            {{!-- <article id="postId" data-ID></article> --}}
-                                            <span>Reply</span>
-                                            {{!-- attach unique ID via data target --}}
-                                            {{!-- dataset.post id --}}
-                                        </a>
+                                    <div class="media-content border-is-transparent">
+                                        <nav class="level is-mobile">
+                                            <div class="level-left">
+                                                <div class="modal-border">
+                                                    <a class="button is-primary modal-button" data-target="#modal"
+                                                        class="button is-small is-info is-outlined">
+                                                        <span class="icon">
+                                                            <i class="fa fa-reply"></i>
+                                                        </span>
+                                                        {{!-- <article id="postId" data-ID></article> --}}
+                                                        <span>Reply</span>
+                                                        {{!-- attach unique ID via data target --}}
+                                                        {{!-- dataset.post id --}}
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </nav>
                                     </div>
                                 </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-            </article>
-        </li>
-        {{/each}}
-    </ul>
-</section>
-{{!-- reply --}}
+                            </div>
+                        </article>
+                    </li>
+                    {{/each}}
+                </ul>
+            </section>
+            {{!-- reply --}}
         </div>
     </div>
 </section>
