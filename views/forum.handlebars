@@ -55,7 +55,7 @@
                 {{#each Post}}
                 {{log this}}
                 {{debugger}}
-                <li>
+                <li data-attribute="{{this.dataValues.id}}">
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
@@ -90,36 +90,23 @@
                 {{/each}}
             </ul>
             {{!-- reply --}}
-            <section class="modal-container">
-                <ul id="replies">
-                    {{#each Reply}}
-                    {{log this}}
-                    {{debugger}}
-                    <li>
-                        <article class="media">
-                            <div class="modal-media-content">
-                                <div class="content">
-                                    <figure class="media-left">
-                                        <p class="image is-64x64">
-                                            <img id="image-init"
-                                                src="https://ui-avatars.com/api?name={{this.dataValues.name}}" />
-                                        </p>
-                                    </figure>
-                                    <div class="replyBox">
-                                        <figure class="media-left">
-                                            <p class="image is-64x64">
-                                                <img id="image-init"
-                                                    src="https://ui-avatars.com/api?name={{this.dataValues.name}}" />
-                                            </p>
-                                        </figure>
-                                        <h1 id="reply"></h1>
-                                        <p id="replyBody">
-                                            {{!-- attach Id from DB to displaynone()
-                                             <large>{{this.dataValues.topic}}</large> --}}
-                                            <br>
-                                            {{this.dataValues.body}}
-                                        </p>
-                                    </div>
+<section class="modal-container">
+    <ul id="replies"><b>Replies</b>
+        {{#each Reply}}
+        {{log this}}
+        {{debugger}}
+        <li>
+            <article class="media">
+                <div class="modal-media-content">
+                    <div class="content">
+                        <h1 id="reply"></h1>
+                        <p id="replyBody">
+                            {{!-- attach Id from DB to displaynone()
+                                <large>{{this.dataValues.topic}}</large> --}}
+                            <br>
+                            {{this.dataValues.body}}
+                        </p>
+                        </figure>
 
                                     <div class="media-content border-is-transparent">
                                         <nav class="level is-mobile">
