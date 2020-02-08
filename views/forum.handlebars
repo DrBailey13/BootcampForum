@@ -76,7 +76,7 @@
                                             <span class="icon">
                                                 <i class="fa fa-reply"></i>
                                             </span>
-                                            <span>Reply</span>
+                                            <span id="pK" data-id="{{this.dataValues.id}}">Reply</span>
                                         </a>
                                     </div>
                                 </nav>
@@ -89,15 +89,9 @@
                 </li>
                 {{/each}}
             </ul>
-        </div>
-    </div>
-</section>
-
-{{!-- REPLY MODAL/INPUT --}}
-
-{{!-- reply --}}
+            {{!-- reply --}}
 <section class="modal-container">
-    <ul>
+    <ul id="replies">
         {{#each Reply}}
         {{log this}}
         {{debugger}}
@@ -105,7 +99,8 @@
             <article class="media">
                 <div class="modal-media-content">
                     <div class="content">
-                        <p>
+                        <h1 id="reply"></h1>
+                        <p id="replyBody">
                             {{!-- attach Id from DB to displaynone()
                                 <large>{{this.dataValues.topic}}</large> --}}
                             <br>
@@ -123,7 +118,7 @@
                                                 <i class="fa fa-reply"></i>
                                             </span>
                                             {{!-- <article id="postId" data-ID></article> --}}
-                                            <span id="pK" data-id="{{this.dataValues.id}}">Reply</span>
+                                            <span>Reply</span>
                                             {{!-- attach unique ID via data target --}}
                                             {{!-- dataset.post id --}}
                                         </a>
@@ -139,6 +134,13 @@
     </ul>
 </section>
 {{!-- reply --}}
+        </div>
+    </div>
+</section>
+
+{{!-- REPLY MODAL/INPUT --}}
+
+
 
 {{!-- Modal --}}
 

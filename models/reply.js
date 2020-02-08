@@ -16,7 +16,7 @@ module.exports = function (sequelize, DataTypes) {
           min: 2,
           max: 2
         },
-      },    
+      }, 
       body: {
         type: DataTypes.TEXT,
         notNull: true,
