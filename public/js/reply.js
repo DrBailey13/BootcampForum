@@ -12,8 +12,11 @@ $(document).ready(function () {
 
         
         // Wont submit the post if we are missing a body or a title
-        
-        if (!replyInput.val().trim() || !replyInitials.val().trim()) {
+        if ($("#replyInitials").val().trim() === "") {
+            alert("Please enter your first and last initials!");
+        } else if ($("#replyBody").val().trim() === "") {
+            alert("Reply field cannot be left blank!");
+        } else { !replyInput.val().trim() || !replyInitials.val().trim();
             console.log("it really works");
         }
         // Constructing a newPost object to hand to the database
@@ -45,7 +48,6 @@ $(document).ready(function () {
     });
 
 });
-
 
 
 

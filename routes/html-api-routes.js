@@ -84,66 +84,113 @@ app.get("/search/:query", (req, res) => { //I used search because that's what I 
     .catch(err => console.log(err + "@@@@@@@@@@"));
 });
 
-// Reply Create
+  // Reply Create
 
-// Reply create
-app.post("/api/reply", function (req, res) {
-  // console.log("reply Data:");
-  // console.log(req.body);
-  db.Reply.create({
+  // Reply create
+  app.post("/api/reply", function (req, res) {
+    // console.log("reply Data:");
+    // console.log(req.body);
+    db.Reply.create({
       name: req.body.name,
       body: req.body.body,
-      created_at: req.body.created_at
+      created_at: req.body.created_at,
+      post_id: req.body.post_id
 
-  }).then(function (results) {
+    }).then(function (results) {
       // `results` here would be the newly created reply
-      res.json(results );
-  });
-});
-
-// app.get reply
-app.get("/api/reply", function (req, res) {
-  db.Reply.findAll({}).then(function (results) {
       res.json(results);
+    });
   });
-});
 
-// app.get("/api/reply", function (req, res) {
-//   res.render("discussion");
-//   var query = {};
-//   if (req.query.name_id) {
-//       query.NameId = req.query.name_id;
-//   }
-//   db.Reply.findAll({
-//       where: query,
-//       include: [db.Post.Body]
-//   }).then(function (dbReply) {
-//       res.json(dbReply);
-//   });
-// });
+  // app.get reply
+  app.get("/api/replies", function (req, res) {
+    db.Reply.findAll({}).then(function (results) {
+      res.json(results);
+    });
+  });
 
-// app.get("/api/post/:id", function(req, res) {
-//   db.Post.findOne({
-//     where: {
-//       id: req.params.id
-//     }
-//   }).then(function(dbPost) {
-//     console.log(dbPost);
-//     res.json(dbPost);
-//   });
-// });
+  // // app.get reply
+  // app.get("/api/reply", function (req, res) {
+  //   db.Reply.findOne({}).then(function (results) {
+  //       res.render("forum");
+  //   });
+  // });
 
-// app.get("/api/reply", function(req, res) {
-//   var query = {};
-//   if(req.query.post_id){
-//     query.PostId = req.query.post_id;
-//   }
-//   db.Reply.findOne({
-//     where: query
-//   }).then(function(dbReply){
-//     res.json(dbReply);
-//   });
-// });
+  // app.get posts with replies
+  // app.get("/api/replies", function (req, res) {
+  //   res.render("forum");
+  //   var query = {};
+  //   if (req.query.post_id) {
+  //       query.PostId = req.query.post_id;
+  //   }
+  //   db.Reply.findAll({
+  //       where: query,
+  //       include: [db.Post.post_id]
+  //   }).then(function (dbReply) {
+  //       res.json(dbReply);
+  //   });
+  // });
 
+  // app.get("/api/post/:id", function(req, res) {
+  //   db.Post.findOne({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(dbPost) {
+  //     console.log(dbPost);
+  //     res.json(dbPost);
+  //   });
+  // });
+
+  app.get("/api/replies", function (req, res) {
+    var query = {};
+    if (req.query.post_id) {
+      query.Post.id = req.query.post_id;
+    }
+    db.Reply.findAll({
+      where: query
+    }).then(function (dbReply) {
+      res.render("forum");
+    });
+  });
+
+
+  // // 
+  // app.get('/post', (req, res) => {
+  //   db.Post.findAll({
+  //     include: [
+  //       {
+  //         model: db.Reply,
+  //       }
+  //     ]
+  //   }).then(Post => {
+  //     const resObj = Post.map(post => {
+  //       return Object.assign(
+  //         {},
+  //         {
+  //           post_id: Post.id,
+  //           name: Post.name,
+  //           Reply: Post.body.map(reply => {
+  //             return Object.assign(
+  //               {},
+  //               {
+  //                 reply_id: reply.id,
+  //                 post_id: post.post_id,
+  //                 body: post.body,
+  //                 reply: post.reply.map(Reply => {
+                  
+  //                 })
+  //               }
+  //             );
+  //           })
+  //       });
+  //     });
+  //     res.json(resObj);
+  //     console.log(resObj);
+  //   });
+  // });
+
+  
 };
-//res.render('post', {dbPost})
+    
+    
