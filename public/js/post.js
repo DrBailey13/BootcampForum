@@ -19,7 +19,7 @@ $(document).ready(function () {
     }).then(function (response) {
         console.log(response);
         $.each( response, function( key, value ) {
-            $("#replies").append(`<div class="reply-${key}"><h3>${response[key].name}</h3><p>${response[key].body}</p>`);
+            $("#replies").append(`<div class="reply-${key}"><B>${response[key].name}</B><p>${response[key].body}</p>`);
 
           });
     }).catch(function(error){

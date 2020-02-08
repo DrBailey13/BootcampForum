@@ -55,7 +55,7 @@
                 {{#each Post}}
                 {{log this}}
                 {{debugger}}
-                <li>
+                <li data-attribute="{{this.dataValues.id}}">
                     <article class="media">
                         <figure class="media-left">
                             <p class="image is-64x64">
@@ -91,7 +91,7 @@
             </ul>
             {{!-- reply --}}
 <section class="modal-container">
-    <ul id="replies">
+    <ul id="replies"><b>Replies</b>
         {{#each Reply}}
         {{log this}}
         {{debugger}}
