@@ -54,8 +54,8 @@ $(document).ready(function () {
     });
     $("#searchForm").on('submit', event =>{
         event.preventDefault()
-        window.location.href ='/search/'+ $("#searchQuery").val()
-    })
+        window.location.href ='/search/'+ $("#searchQuery").val();
+    });
 });
 
 

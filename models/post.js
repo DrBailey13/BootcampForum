@@ -1,5 +1,6 @@
 module.exports = function (sequelize, DataTypes) {
   var Post = sequelize.define("Post", {
+
     name: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -7,9 +8,9 @@ module.exports = function (sequelize, DataTypes) {
         notNull: {
           msg: 'Please enter your initials'
         },
-        len: [1, 2]
+        min:2,
+        max: 2
       },
-      primaryKey: true
     },
     topic: {
       type: DataTypes.STRING,
@@ -24,35 +25,22 @@ module.exports = function (sequelize, DataTypes) {
       validate: {
         len: [1, 255]
       }
-    },
+    }},  
+  {  
+    freezeTableName: true,
   });
+
+
+  Post.associate = function(models) {
+    // Associating replies with Posts
+    Post.hasMany(models.Reply);
+  };
   
   return Post;
 
-  var Reply = sequelize.define("Reply", {
-    name: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [1, 2]
-      },
-      references: "posts",
-      referencesKey: "id",
-    },    
-    body: {
-      type: DataTypes.TEXT,
-      allowNull: false,
-      validate: {
-        len: [1, 255]
-      }
-    },    
-  });
-  return Reply;
-
-  Post.hasMany(reply); // Set one to many relationship 
-  
 };
 
+// have an associated id for each post/reply, new link continueing to display post with replies attached.
 
 
 
