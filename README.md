@@ -64,6 +64,16 @@ The following code styles were used to complete the application:
 
 * Deployed with Heroku
 
+## Future Development 
+
+* Log in and log out options
+
+* Parking information around the campus
+
+* Multiple classes or schools having access to a page
+
+* Creating tabs for set discussion topics
+
 ## Credits
 
 Initials Avatar API: https://rapidapi.com/benbaler/api/initials-avatar
