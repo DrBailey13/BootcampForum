@@ -2,6 +2,7 @@ $(document).ready(function () {
     // Getting jQuery references to the post body, and initials
     var replyInput = $("#replyBody");
     var replyInitials = $("#replyInitials");
+    var postId = $("#pK");
     // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
     // var replyId;
     // Sets a flag for whether or not we're updating a post to be false initially
@@ -23,6 +24,7 @@ $(document).ready(function () {
         var newReply = {
             name: replyInitials.val().trim(),
             body: replyInput.val().trim(),
+            post_id: postId.attr("data-id"),
         };
         // console.log(newPost);
        var queryURL = "https://ui-avatars.com/api?name=" + replyInitials.val().trim();
@@ -51,4 +53,4 @@ $(document).ready(function () {
 
 
 
-// /ON click grab post id to attach reply to - dynamic populate html with replies.
+// for e

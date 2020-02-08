@@ -102,12 +102,17 @@ app.get("/search/:query", (req, res) => { //I used search because that's what I 
     });
   });
 
-  // app.get reply
-  app.get("/api/replies", function (req, res) {
-    db.Reply.findAll({}).then(function (results) {
-      res.json(results);
+
+   
+    app.get("/api/replies/:postId", function (req, res) {
+      db.Reply.findAll({
+        where: {post_id: req.params.postId}
+      }).then(function (results) {
+        res.json(results);
+      });
     });
-  });
+    
+ 
 
   // // app.get reply
   // app.get("/api/reply", function (req, res) {
@@ -155,42 +160,41 @@ app.get("/search/:query", (req, res) => { //I used search because that's what I 
   });
 
 
-  // // 
-  // app.get('/post', (req, res) => {
-  //   db.Post.findAll({
-  //     include: [
-  //       {
-  //         model: db.Reply,
-  //       }
-  //     ]
-  //   }).then(Post => {
-  //     const resObj = Post.map(post => {
-  //       return Object.assign(
-  //         {},
-  //         {
-  //           post_id: Post.id,
-  //           name: Post.name,
-  //           Reply: Post.body.map(reply => {
-  //             return Object.assign(
-  //               {},
-  //               {
-  //                 reply_id: reply.id,
-  //                 post_id: post.post_id,
-  //                 body: post.body,
-  //                 reply: post.reply.map(Reply => {
+  // 
+  app.get('/replies', (req, res) => {
+    db.Post.findAll({
+      include: [
+        {
+          model: db.Reply,
+        }
+      ]
+    }).then(Post => {
+      const resObj = Post.map(post => {
+        return Object.assign(
+          {},
+          {
+            post_id: Post.id,
+            name: Post.name,
+            Reply: Post.body.map(reply => {
+              return Object.assign(
+                {},
+                {
+                  reply_id: reply.id,
+                  post_id: post.post_id,
+                  body: post.body,
+                  reply: post.reply.map(Reply => {
                   
-  //                 })
-  //               }
-  //             );
-  //           })
-  //       });
-  //     });
-  //     res.json(resObj);
-  //     console.log(resObj);
-  //   });
-  // });
+                  })
+                }
+              );
+            })
+        });
+      });
+      res.json(resObj);
+      console.log(resObj);
+    });
+  });
 
   
-};
-    
-    
+
+}; 

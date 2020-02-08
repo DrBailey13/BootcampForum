@@ -1,4 +1,9 @@
 $(document).ready(function () {
+
+    
+ 
+
+
     // Getting jQuery references to the post body, title, form, and author select
     var bodyInput = $("#body");
     var topicInput = $("#topic");
@@ -7,7 +12,22 @@ $(document).ready(function () {
     // Adding an event listener for when the form is submitted
     //$(postForm).on("submit", handleFormSubmit);
     // Gets the part of the url that comes after the "?" (which we have if we're updating a post)
-    var postId;
+    var postId2 = $("#pK").attr("data-id");
+    $.ajax({
+        url: "/api/replies/" + postId2,
+        method: "GET",
+    }).then(function (response) {
+        console.log(response);
+        $.each( response, function( key, value ) {
+            $("#replies").append(`<div class="reply-${key}"><h3>${response[key].name}</h3><p>${response[key].body}</p>`);
+
+          });
+    }).catch(function(error){
+        console.log("error ", error);
+    });
+
+    
+
     // Sets a flag for whether or not we're updating a post to be false initially
     var updating = false;
     $("#submit").on("click", function (event) {
@@ -28,6 +48,7 @@ $(document).ready(function () {
                 name: initialsInput.val().trim(),
                 topic: topicInput.val().trim(),
                 body: bodyInput.val().trim(),
+
             };
     
             // console.log(newPost);
